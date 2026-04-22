@@ -1,0 +1,13 @@
+[Unit]
+Description=WeAct 0.96" FS USB Display
+
+[Service]
+Type=simple
+User=deck
+WorkingDirectory=/home/deck/fs-display-steamos
+ExecStart=/home/deck/fs-display-steamos/venv/bin/python main.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

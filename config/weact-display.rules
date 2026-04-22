@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="fe0c", TAG+="systemd", SYMLINK+="weact-display", RUN+="/usr/bin/systemctl start weact-display.service"
+ACTION=="remove", SUBSYSTEM=="tty", ENV{ID_VENDOR_ID}=="1a86", ENV{ID_MODEL_ID}=="fe0c", RUN+="/usr/bin/systemctl stop weact-display.service"
